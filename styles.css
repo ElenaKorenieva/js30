@@ -1,0 +1,101 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+}
+
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    background: url(./R.jpg);
+    margin: 0 auto;
+}
+
+.clock {
+    height: 400px;
+    width: 400px;
+    border: 25px solid #fff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(250, 250, 250, 0.5);
+    box-shadow:
+          0 0 0px 4px rgba(0,0,0,0.1),
+          inset 0 0 0 3px #efefef,
+          inset 0 0 10px #000,
+          0 0 10px rgba(0,0,0,0.2);
+    
+}
+
+.clock .number {
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 2.0rem; 
+    font-weight: bold;  
+    padding: 10px; 
+}
+
+.clock .number1 { --rotation: 30deg; }
+.clock .number2 { --rotation: 60deg; }
+.clock .number3 { --rotation: 90deg; }
+.clock .number4 { --rotation: 120deg; }
+.clock .number5 { --rotation: 150deg; }
+.clock .number6 { --rotation: 180deg; }
+.clock .number7 { --rotation: 210deg; }
+.clock .number8 { --rotation: 240deg; }
+.clock .number9 { --rotation: 270deg; }
+.clock .number10 { --rotation: 300deg; }
+.clock .number11 { --rotation: 330deg; }
+
+.clock .hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    background-color: black;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+    z-index: 10:
+}
+
+.clock .hand.second {
+    width: 3px;
+    height: 40%;
+    background-color: red;
+}
+
+.clock .hand.minute {
+    width: 6px;
+    height: 35%;
+    background-color: black;
+}
+
+.clock .hand.hour {
+    width: 6px;
+    height: 35%;
+    background-color: black;
+}
+
+.date {
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    color: black;
+    font-family: Gotham Rounded, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}

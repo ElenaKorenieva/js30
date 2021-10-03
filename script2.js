@@ -1,25 +1,25 @@
 var data = new Date();
 var month = new Array(12);
-     month[1] = 'Января';
-     month[2] = 'Февраля';
-     month[3] = 'Марта';
-     month[4] = 'Апреля';
-     month[5] = 'Мая';
-     month[6] = 'Июня';
-     month[7] = 'Июля';
-     month[8] = 'Августа';
-     month[9] = 'Сентября';
-     month[10] = 'Октября';
-     month[11] = 'Ноября';
-     month[12] = 'Декабря';
+     month[1] = 'January';
+     month[2] = 'February';
+     month[3] = 'March';
+     month[4] = 'April';
+     month[5] = 'May';
+     month[6] = 'June';
+     month[7] = 'July';
+     month[8] = 'August';
+     month[9] = 'September';
+     month[10] = 'October';
+     month[11] = 'November';
+     month[12] = 'December';
 
 var weekday = new Array(7);
-    weekday[0] = 'Воскресенье';
-    weekday[1] = 'Понедельник';
-    weekday[2] = 'Вторник';
-    weekday[3] = 'Среда';
-    weekday[4] = 'Четверг';
-    weekday[5] = 'Пятница';
-    weekday[6] = 'Суббота';
+    weekday[0] = 'Sunday';
+    weekday[1] = 'Monday';
+    weekday[2] = 'Tuesday';
+    weekday[3] = 'Wednesday';
+    weekday[4] = 'Thursday';
+    weekday[5] = 'Friday';
+    weekday[6] = 'Saturday';
 
 document.write(weekday[data.getDay()] + ', ' + data.getDate()+ ' ' + month[data.getMonth()+1])

@@ -22,4 +22,4 @@ var weekday = new Array(7);
     weekday[5] = 'Пятница';
     weekday[6] = 'Суббота';
 
-document.write(data.toLocaleTimeString() + ' ' + weekday[data.getDay()] + ', ' + data.getDate()+ ' ' + month[data.getMonth()+1])
+document.write(weekday[data.getDay()] + ', ' + data.getDate()+ ' ' + month[data.getMonth()+1])
